@@ -1,0 +1,131 @@
+/* General Page Styles */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #00b4d8;
+  padding: 20px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+  background: url('background.jpg') no-repeat center center/cover;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-overlay {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+}
+
+.hero-text {
+  color: rgb(227, 38, 5);
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+}
+
+.hero-text span {
+  color: #00ffcc;
+}
+
+/* Book Appointment Button */
+.appointment-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #f50f0b;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.appointment-btn:hover {
+  background-color: #d70907;
+}
+
+/* Login Section */
+.login-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  position: relative;
+  z-index: 2;
+  padding: 30px 0;
+}
+
+.login-card {
+  text-align: center;
+}
+
+.login-card img {
+  width: 50px;
+  height: 50px;
+}
+
+.login-card h3 {
+  margin-top: 5px;
+  font-size: 15px;
+  color: #1b1a1a;
+}
+
+.login-card a {
+  display: inline-block;
+  margin-top: 2px;
+  padding: 8px 16px;
+  background-color: #f50f0b;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background-color: #3e9bc3; /* same as header */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
+}
+
+footer p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 16px;
+}
