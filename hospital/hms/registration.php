@@ -22,63 +22,73 @@ if(isset($_POST['submit'])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Balaji | Patient Registration</title>
-    <style>
-        body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 0; padding: 0; }
-        .container { width: 400px; margin: 40px auto; background: #fff; padding: 20px; border-radius: 5px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        h2 { text-align: center; margin-bottom: 20px; }
-        label { display: block; margin-top: 10px; }
-        input[type="text"], input[type="email"], input[type="password"] { width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; }
-        .gender { margin: 10px 0; }
-        .gender input { margin-right: 5px; }
-        .agree { margin: 10px 0; }
-        button { width: 100%; padding: 10px; background: #007bff; color: #fff; border: none; border-radius: 4px; cursor: pointer; }
-        button:hover { background: #0056b3; }
-        .success { color: green; text-align: center; margin-bottom: 10px; }
-        .login-link { display: block; text-align: center; margin-top: 10px; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Patient Registration - Balaji Clinic Hospital</title>
+  <link rel="stylesheet" href="../style4.css"/>
+  <link rel="stylesheet" href="login.css"/>
 </head>
 <body>
-    <div class="container">
-        <h2>Balaji | Patient Registration</h2>
-        <?php if($msg) echo '<p class="success">'.$msg.'</p>'; ?>
+
+  <!-- Header Section -->
+  <header>
+    <div class="logo">
+      <h2>BALAJI CLINIC HOSPITAL</h2>
+    </div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../services.html">Services</a>
+      <a href="../about.html">About Us</a>
+      <a href="admin/index.php">Admin Login</a>
+    </nav>
+  </header>
+
+  <!-- Registration Section -->
+  <section class="login-section">
+    <div class="login-container">
+        <h2>Patient Registration</h2>
+        <?php if($msg) echo '<p style="color:green; text-align:center;">'.$msg.'</p>'; ?>
 
         <form method="post" onsubmit="return validateForm();">
-            <label>Full Name</label>
-            <input type="text" name="full_name" required>
-
-            <label>Address</label>
-            <input type="text" name="address" required>
-
-            <label>City</label>
-            <input type="text" name="city" required>
-
-            <label>Gender</label>
-            <div class="gender">
-                <input type="radio" name="gender" value="female" required> Female
-                <input type="radio" name="gender" value="male" required> Male
+            <div class="form-group">
+                <input type="text" name="full_name" placeholder="Full Name" required>
             </div>
-
-            <label>Email</label>
-            <input type="email" name="email" required>
-
-            <label>Password</label>
-            <input type="password" id="password" name="password" required>
-
-            <label>Confirm Password</label>
-            <input type="password" id="password_again" name="password_again" required>
-
-            <div class="agree">
-                <input type="checkbox" checked disabled> I agree
+            <div class="form-group">
+                <input type="text" name="address" placeholder="Address" required>
             </div>
-
-            <button type="submit" name="submit">Submit</button>
-            <div class="login-link">
-                Already have an account? <a href="user-login.php">Log-in</a>
+            <div class="form-group">
+                <input type="text" name="city" placeholder="City" required>
+            </div>
+            <div class="form-group">
+                <label>Gender</label>
+                <div class="radio-group">
+                    <input type="radio" name="gender" value="female" required> Female
+                    <input type="radio" name="gender" value="male" required> Male
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+            <div class="form-group">
+                <input type="password" id="password_again" name="password_again" placeholder="Confirm Password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" name="submit" class="login-btn">Submit</button>
+            </div>
+            <div class="form-group register-link">
+                Already have an account? <a href="login.php">Log-in</a>
             </div>
         </form>
     </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 BALAJI CLINIC HOSPITAL. All rights reserved.</p>
+  </footer>
 
 <script>
 function validateForm() {

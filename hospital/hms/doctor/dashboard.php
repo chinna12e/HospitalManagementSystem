@@ -4,7 +4,7 @@ include('include/config.php');
 
 // Ensure doctor is logged in
 if(!isset($_SESSION['dlogin'])) {
-    header('Location: doctor-login.php');
+    header('Location: ../login.php');
     exit();
 }
 ?>
@@ -12,38 +12,51 @@ if(!isset($_SESSION['dlogin'])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Doctor | Dashboard</title>
-    <style>
-        body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 0; padding: 0; }
-        .header { background: #007bff; color: #fff; padding: 15px; text-align: center; }
-        .container { width: 90%; max-width: 1100px; margin: 30px auto; }
-        .card-container { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
-        .card { background: #fff; padding: 30px; text-align: center; border-radius: 5px; box-shadow: 0 0 10px rgba(0,0,0,0.1); width: 280px; }
-        .card h2 { margin: 10px 0; }
-        .card a { display: inline-block; margin-top: 10px; text-decoration: none; color: #007bff; }
-        .logout { text-align: center; margin-top: 30px; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Doctor Dashboard - Balaji Clinic Hospital</title>
+  <link rel="stylesheet" href="../../style4.css"/>
+  <link rel="stylesheet" href="../dashboard.css"/>
 </head>
 <body>
-    <div class="header">
-        <h1>Doctor | Dashboard</h1>
-    </div>
 
+  <!-- Header Section -->
+  <header>
+    <div class="logo">
+      <h2>BALAJI CLINIC HOSPITAL</h2>
+    </div>
+    <nav>
+      <a href="edit-profile.php">My Profile</a>
+      <a href="appointment-history.php">My Appointments</a>
+      <a href="logout.php">Logout</a>
+    </nav>
+  </header>
+
+  <!-- Dashboard Section -->
+  <section class="dashboard-section">
     <div class="container">
+        <h1 class="dashboard-heading">Welcome, Doctor!</h1>
         <div class="card-container">
-            <div class="card">
+            <div class="card profile">
                 <h2>My Profile</h2>
-                <a href="edit-profile.php">Update Profile</a>
+                <a href="edit-profile.php" class="card-link">Update Profile</a>
             </div>
-            <div class="card">
+            <div class="card appointments">
                 <h2>My Appointments</h2>
-                <a href="appointment-history.php">View Appointment History</a>
+                <a href="appointment-history.php" class="card-link">View Appointment History</a>
             </div>
-        </div>
-        <div class="logout">
-            <a href="logout.php">Logout</a>
+             <div class="card book">
+                <h2>Manage Patients</h2>
+                <a href="manage-patient.php" class="card-link">Manage Patients</a>
+            </div>
         </div>
     </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 BALAJI CLINIC HOSPITAL. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>

@@ -1,0 +1,61 @@
+.dashboard-section {
+    padding: 50px 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.dashboard-heading {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.card-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    color: #fff;
+    width: 300px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.profile { background: linear-gradient(135deg, #ff7eb3, #ff758c); }
+.appointments { background: linear-gradient(135deg, #42a5f5, #478ed1); }
+.book { background: linear-gradient(135deg, #66bb6a, #43a047); }
+
+.card h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.card-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.card-link:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
